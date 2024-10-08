@@ -1,0 +1,84 @@
+/* Header container */
+.header {
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Logo styles */
+.logo {
+    display: inline-block; /* Allow margins and padding */
+    font-family: 'Arial', sans-serif; /* Choose a font */
+    font-weight: bold; /* Make letters bold */
+    font-size: 2.5rem; /* Adjust size as needed */
+    color: #fff; /* Color for the logo text */
+    padding: 0; /* Remove padding */
+    line-height: 2.5rem; /* Match line height to font size */
+    border-bottom: 2px solid #c0392b; /* Red border under the logo */
+    user-select: none; /* Make the logo non-selectable */
+    cursor: pointer;
+}
+
+/* Menu container styles */
+.menu-container {
+    position: relative; /* Allow absolute positioning of dropdown */
+}
+
+/* Menu toggle button styles */
+.menu-toggle {
+    background: none; /* Remove default button styling */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor */
+    color: #fff; /* Button color */
+    font-size: 2rem; /* Increase size for visibility */
+    display: none; /* Hide by default on desktop */
+}
+
+/* Navigation styles */
+.nav {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    gap: 10px; /* Space between buttons */
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: row; /* Keep header items in a row */
+        justify-content: space-between; /* Space out logo and toggle */
+        padding: 10px; /* Adjust padding for mobile */
+    }
+
+    .nav {
+        display: none; /* Hide navigation by default */
+        flex-direction: column; /* Stack navigation items vertically */
+        width: 200px; /* Fixed width for dropdown menu */
+        background-color: var(--background-color); /* Match background */
+        position: absolute; /* Position dropdown menu */
+        top: 50px; /* Position just below the header */
+        right: 0; /* Align to the right */
+        z-index: 10; /* Ensure it appears above other content */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional shadow for dropdown */
+    }
+
+    .nav.open {
+        display: flex; /* Show navigation when open */
+    }
+
+    .menu-toggle {
+        display: block; /* Show the toggle button on mobile */
+    }
+
+    /* Adjust button styles for mobile */
+    .button {
+        width: 100%; /* Full width for buttons in dropdown */
+        text-align: left; /* Align text to the left */
+    }
+
+    /* Icon styles */
+    .nav .fa-icon {
+        margin-right: 10px; /* Space between icon and button text */
+        vertical-align: middle; /* Align icon vertically */
+    }
+}

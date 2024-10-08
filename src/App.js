@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import { Component } from 'react';
 import './App.css';
+import Header from './components/Header/Header';
+import Layout from './components/Layout/Layout';
+import SecondLayout from './components/SecondLayout/SecondLayout';
+import Findme from './components/Findme/Findme';
+import Footer from './components/Footer/Footer';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  handleClick = () => {
+    alert("Button Clicked");
+  };
+
+  render() {
+    return (
+      <div>
+        <Header />
+        <Layout />
+        <SecondLayout />
+        <Findme />
+        <Footer />
+      </div>
+    );
+  }
 }
 
 export default App;

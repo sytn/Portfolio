@@ -1,0 +1,28 @@
+.second-layout {
+    display: flex;
+    flex-direction: column; /* Stack sections vertically by default */
+    max-height: 100vh; /* Set height to auto for mobile */
+  }
+  
+  .left-section, .right-section {
+    flex: 1; /* Both sections will take up equal space */
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+  }
+  
+  .left-section {
+
+  }
+  
+  .right-section {
+    
+  }
+  
+  /* Media query for larger screens */
+  @media (min-width: 768px) {
+    .second-layout {
+      flex-direction: row; /* Align sections side by side on larger screens */
+      height: 100vh; /* Full viewport height for larger screens */
+    }
+  }
+  

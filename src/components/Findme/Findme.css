@@ -1,0 +1,49 @@
+/* Findme.css */
+
+.findme {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px; /* Köşeleri yuvarlak yap */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+}
+
+.findme h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.findme h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.findme span {
+    font-weight: bold; /* Vurgulamak için kalın yaz */
+    color: #007bff; /* Mavi vurgulama rengi */
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* İkonlar arasındaki boşluk */
+}
+
+.icon-button {
+    background: transparent; /* Arka planı şeffaf yap */
+    border: none; /* Kenarlıkları kaldır */
+    cursor: pointer; /* İmleci değiştir */
+    transition: transform 0.2s; /* Geçiş efekti */
+}
+
+.icon-button:hover {
+    transform: scale(1.1); /* Hover etkisi */
+}
+
+.icon-button:focus {
+    outline: none; /* Odaklanma çizgisini kaldır */
+}
+
+.icon-button svg {
+    font-size: 28px; /* İkon boyutu */
+    color: white;
+}

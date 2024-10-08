@@ -1,13 +1,86 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+    --background-color: #1C1C1C; /* Dark gray background */
+    --text-color: #EAEAEA; /* Light gray text */
+    --accent-color: #c0392b; /* Vibrant red for accents */
+    --shadow-border-color: #000000; /* Black for shadows and borders */
+}
+
+/* Global styles */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    font-family: 'Poppins', sans-serif; /* You can choose your preferred font */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color);
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none; /* Optional: removes underline from links */
+}
+
+a:hover {
+    text-decoration: underline; /* Optional: underline on hover */
+}
+
+/* Example of using shadow/border color */
+.card {
+    border: 1px solid var(--shadow-border-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional: shadow effect */
+    background-color: var(--background-color); /* Card background */
+    padding: 16px; /* Optional: padding for the card */
+}
+
+/* Button styles */
+/* Button styles */
+.button {
+    background-color: transparent; /* Transparent background */
+    min-width: 115px; /* Use min-width for flexibility */
+    height: 40px; /* Fixed height */
+    color: var(--text-color); /* Text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px 20px; /* Padding around the text */
+    font-size: 1rem; /* Responsive font size */
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif; /* Font family */
+    position: relative; /* For positioning the ::after pseudo-element */
+    cursor: pointer; /* Pointer cursor on hover */
+    overflow: hidden; /* Prevent overflow */
+}
+
+/* Adjusted Hover effect */
+.button::after {
+    content: ''; /* Required for pseudo-element */
+    position: absolute; /* Position it relative to the button */
+    left: 10px; /* Start from 10px from the left */
+    bottom: 0; /* Align to the bottom */
+    height: 2px; /* Adjust height */
+    width: calc(100% - 20px); /* Full width minus padding */
+    background-color: var(--accent-color); /* Underline color */
+    transform: translateX(-100%); /* Start from the left (off screen) */
+    transition: transform 0.3s ease; /* Smooth transition for slide effect */
+    opacity: 0; /* Initially hide the underline */
+}
+
+/* Show underline on hover */
+.button:hover::after {
+    transform: translateX(0); /* Move to full width on hover */
+    opacity: 1; /* Make the underline visible */
+}
+
+
+html {
+    scroll-behavior: smooth;
 }

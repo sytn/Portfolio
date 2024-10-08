@@ -1,0 +1,57 @@
+/* General Layout */
+.layout {
+    display: flex;
+    flex-direction: column;
+    height: 89.9vh; /* Full height of the view */
+    color: #fff;
+}
+
+.content {
+    display: flex; /* Arrange child elements in a row by default */
+    flex: 1; /* Take up the remaining space */
+}
+
+/* Left Column */
+.left-column {
+    display: flex; /* Set display to flex for child alignment */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center children vertically */
+    align-items: center; /* Center children horizontally */
+    padding: 20px; /* Padding around the content */
+    height: 100%; /* Occupy full height */
+    flex: 1; /* Grow to fill space */
+}
+
+.left-column > .item {
+    margin: 10px 0; /* Space between items */
+    color: white; /* Text color */
+    padding: 10px; /* Padding for each item */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Right Column */
+.right-column {
+    display: flex; /* Flexbox display for alignment */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 20px; /* Padding around the content */
+    height: 100%; /* Occupy full height */
+    flex: 1; /* Grow to fill space */
+}
+
+/* Media Queries for Mobile-Friendly Layout */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column; /* Stack the columns vertically on mobile */
+    }
+
+    .left-column, .right-column {
+        width: 100%; /* Make both columns full-width */
+        height: auto; /* Let the height adjust naturally */
+    }
+
+    .right-column {
+        height: 300px; /* Set a fixed height for the 3D scene on mobile */
+    }
+}
