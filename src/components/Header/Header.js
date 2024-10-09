@@ -1,48 +1,35 @@
-import * as React from "react";
-import './header.css'; // Ensure this file exists and styles are defined
-import Button from "../Button/Button"; // Ensure this Button component works
-import '../../index.css'; // Import global styles
+import React from "react";
+import './header.css';
+import Button from "../Button/Button";
+import '../../index.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAddressCard, faContactCard, faHome, faInfo, faWorm, faBars, faTimes, faProcedures, faFile } from "@fortawesome/free-solid-svg-icons"; // Importing icons
+import { faAddressCard, faBars, faTimes, faWorm, faFile, faHome } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
-class Header extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            isDropdownOpen: false,
-        };
-        this.toggleDropdown = this.toggleDropdown.bind(this);
-    }
+const Header = () => {
+    const [isDropdownOpen, setIsDropdownOpen] = React.useState(false);
+    const navigate = useNavigate(); // useNavigate hook'unu burada kullanın
 
-    toggleDropdown() {
-        this.setState((prevState) => ({
-            isDropdownOpen: !prevState.isDropdownOpen,
-        }));
-    }
+    const toggleDropdown = () => {
+        setIsDropdownOpen(prevState => !prevState);
+    };
 
-    handleNavigation(path) {
-        // Add logic for navigation, e.g., using React Router
-        console.log(`Navigating to ${path}`);
-    }
-
-    render() {
-        return (
-            <header className="header"> {/* Add a class name to apply styles */}
-                <span className="logo">BA.</span> {/* Single span for logo */}
-                <div className="menu-container">
-                    <button className="menu-toggle" onClick={this.toggleDropdown}>
-                        <FontAwesomeIcon icon={this.state.isDropdownOpen ? faTimes : faBars} />
-                    </button>
-                    <nav className={`nav ${this.state.isDropdownOpen ? 'open' : ''}`}>
-                        <Button text={<><FontAwesomeIcon icon={faHome} className="fa-icon"/> Home</>} onClick={() => this.handleNavigation('/home')} />
-                        <Button text={<><FontAwesomeIcon icon={faAddressCard} className="fa-icon"/> About</>} onClick={() => this.handleNavigation('/about')} />
-                        <Button text={<><FontAwesomeIcon icon={faWorm} className="fa-icon"/> Projects</>} onClick={() => this.handleNavigation('/services')} />
-                        <Button text={<><FontAwesomeIcon icon={faFile} className="fa-icon"/> Resume</>} onClick={() => this.handleNavigation('/contact')} />
-                    </nav>
-                </div>
-            </header>
-        );
-    }
-}
+    return (
+        <header className="header">
+            <span className="logo">BA.</span>
+            <div className="menu-container">
+                <button className="menu-toggle" onClick={toggleDropdown}>
+                    <FontAwesomeIcon icon={isDropdownOpen ? faTimes : faBars} />
+                </button>
+                <nav className={`nav ${isDropdownOpen ? 'open' : ''}`}>
+                    <Button text={<><FontAwesomeIcon icon={faHome} className="fa-icon"/> Home</>} onClick={() => navigate('/home')} />
+                    <Button text={<><FontAwesomeIcon icon={faAddressCard} className="fa-icon"/> About</>} onClick={() => navigate('/about')} />
+                    <Button text={<><FontAwesomeIcon icon={faWorm} className="fa-icon"/> Projects</>} onClick={() => navigate('/projects')} />
+                    <Button text={<><FontAwesomeIcon icon={faFile} className="fa-icon"/> Resume</>} onClick={() => navigate('/resume')} />
+                </nav>
+            </div>
+        </header>
+    );
+};
 
 export default Header;

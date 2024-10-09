@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 50px auto;
+    font-family: "Poppins", sans-serif;
+}
+
+.section1 {
+    display: flex;
+    width: 100%;
+}
+
+.rightSide {
+    flex: 1;
+    padding: 20px;
+}
+
+.leftSide {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img {
+    width: auto; /* Genişliği otomatik ayarlar */
+    height: 60vh; /* İstenilen yüksekliği belirleyin */
+    object-fit: cover; /* Görselin orantısını korur ve alanı doldurur */
+    border-radius: 8px; /* Görselin köşelerini yuvarlar */
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+h2 span {
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+ul {
+    margin-left: 20px; /* Listeyi sola kaydır */
+    padding-left: 0; /* Varsayılan padding'i kaldır */
+    list-style: none; /* Varsayılan simgeleri kaldır */
+}
+
+li {
+    margin: 10px 0;
+    position: relative; /* Pozisyonu göreli yap */
+    padding-left: 35px; /* Sol tarafına daha fazla boşluk bırak */
+    line-height: 1.5; /* Satır yüksekliği ayarı */
+}
+
+li::before {
+    content: '👉'; /* Burada istediğiniz simgeyi ekleyebilirsiniz */
+    position: absolute;
+    left: 0; /* Soldan 0 birim */
+    top: 45%; /* Ortadan biraz daha yukarı */
+    transform: translateY(-50%); /* Dikey olarak ortala */
+    color: #c0392b; /* Simge rengi */
+    font-size: 1.5rem; /* Simge boyutu */
+}
+
+span {
+    color: #c0392b;
+}
+
+.section2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 75em;
+    margin: 50px auto;
+    font-family: "Poppins", sans-serif;
+}
+
+.section2 .skills-header {
+    text-decoration: underline;
+    text-decoration-color: #c0392b;
+    margin-top: 2em;
+}
+
+.tools-header {
+    margin-top: 4em;
+}
+
+.skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill-box {
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 150px;
+    border: 1px solid white; 
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.skill-box:hover {
+    transform: scale(1.05);
+}
