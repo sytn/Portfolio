@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 50px auto;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+}
+
+.projects-header {
+    margin-bottom: 20px;
+}
+
+.projects-header h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.projects-header p {
+    font-size: 1.2rem;
+}
+
+.projects-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between the cards */
+}
+
+@media (max-width: 768px) {
+    .projects-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .projects-header p {
+        font-size: 1rem;
+    }
+
+    .projects-section {
+        flex-direction: column; /* Stack cards vertically */
+    }
+}

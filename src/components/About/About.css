@@ -14,11 +14,13 @@
 .section1 {
     display: flex;
     width: 100%;
+    flex-wrap: wrap; /* Mobil için sarma */
 }
 
 .rightSide {
     flex: 1;
     padding: 20px;
+    min-width: 300px; /* Minimum genişlik belirleyin */
 }
 
 .leftSide {
@@ -30,10 +32,10 @@
 }
 
 .img {
-    width: auto; /* Genişliği otomatik ayarlar */
-    height: 60vh; /* İstenilen yüksekliği belirleyin */
-    object-fit: cover; /* Görselin orantısını korur ve alanı doldurur */
-    border-radius: 8px; /* Görselin köşelerini yuvarlar */
+    width: auto; 
+    height: 60vh; 
+    object-fit: cover; 
+    border-radius: 8px; 
 }
 
 h2 {
@@ -51,26 +53,26 @@ p {
 }
 
 ul {
-    margin-left: 20px; /* Listeyi sola kaydır */
-    padding-left: 0; /* Varsayılan padding'i kaldır */
-    list-style: none; /* Varsayılan simgeleri kaldır */
+    margin-left: 20px; 
+    padding-left: 0; 
+    list-style: none; 
 }
 
 li {
     margin: 10px 0;
-    position: relative; /* Pozisyonu göreli yap */
-    padding-left: 35px; /* Sol tarafına daha fazla boşluk bırak */
-    line-height: 1.5; /* Satır yüksekliği ayarı */
+    position: relative; 
+    padding-left: 35px; 
+    line-height: 1.5; 
 }
 
 li::before {
-    content: '👉'; /* Burada istediğiniz simgeyi ekleyebilirsiniz */
+    content: '👉'; 
     position: absolute;
-    left: 0; /* Soldan 0 birim */
-    top: 45%; /* Ortadan biraz daha yukarı */
-    transform: translateY(-50%); /* Dikey olarak ortala */
-    color: #c0392b; /* Simge rengi */
-    font-size: 1.5rem; /* Simge boyutu */
+    left: 0; 
+    top: 45%; 
+    transform: translateY(-50%); 
+    color: #c0392b; 
+    font-size: 1.5rem; 
 }
 
 span {
@@ -118,4 +120,44 @@ span {
 
 .skill-box:hover {
     transform: scale(1.05);
+}
+
+/* Medya Sorguları */
+@media (max-width: 768px) {
+    .section1 {
+        flex-direction: column; /* Dikey hizalama */
+    }
+    
+    .rightSide, .leftSide {
+        min-width: 100%; /* Tam genişlik */
+        padding: 10px; /* Daha az iç boşluk */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Daha küçük başlık boyutu */
+    }
+
+    p {
+        font-size: 1rem; /* Daha küçük metin boyutu */
+    }
+
+    .skill-box {
+        width: 100%; /* Tam genişlik */
+        padding: 15px; /* Daha az iç boşluk */
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.2rem; /* Daha küçük başlık boyutu */
+    }
+
+    p {
+        font-size: 0.9rem; /* Daha küçük metin boyutu */
+    }
+
+    .skill-box {
+        width: 100%; /* Tam genişlik */
+        padding: 10px; /* Daha az iç boşluk */
+    }
 }
