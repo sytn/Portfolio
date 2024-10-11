@@ -7,6 +7,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@fullpage/react-fullpage": "^0.1.44",
+    "@mediapipe/tasks-vision": "^0.10.17",
     "@react-pdf/renderer": "^4.0.0",
     "@react-spring/web": "^9.7.4",
     "@react-three/drei": "^9.114.0",
@@ -21,7 +22,7 @@
     "react-dom": "^18.3.1",
     "react-pdf": "^9.1.1",
     "react-router-dom": "^6.26.2",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "react-suspense": "^0.1.0",
     "reactstrap": "^9.2.3",
     "three": "^0.169.0",
@@ -29,9 +30,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -51,5 +52,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "react-app-rewired": "^2.2.1"
   }
 }

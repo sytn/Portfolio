@@ -20,16 +20,16 @@ const ThreeDScene = () => {
     const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {
-        const totalDuration = 1500; // Total loading time in milliseconds
-        const incrementTime = 30; // Time between each increment
-        const incrementValue = (incrementTime / totalDuration) * 100; // Percentage increment
+        const totalDuration = 1500; // Toplam yükleme süresi
+        const incrementTime = 30; // Her artış arasındaki süre
+        const incrementValue = (incrementTime / totalDuration) * 100; // Yüzde artışı
         
         const interval = setInterval(() => {
             setProgress((prev) => {
                 if (prev + incrementValue >= 100) {
                     clearInterval(interval);
-                    setIsLoaded(true); // Mark loading as complete
-                    return 100; // Ensure it ends at 100
+                    setIsLoaded(true);
+                    return 100;
                 }
                 return prev + incrementValue;
             });
@@ -40,7 +40,7 @@ const ThreeDScene = () => {
 
     return (
         <div style={{ height: '100%', width: '100%', position: 'relative' }}>
-            {/* Progress bar while loading */}
+            {/* Yükleme sırasında ilerleme çubuğu */}
             {!isLoaded && (
                 <progress
                     value={progress}
@@ -51,19 +51,19 @@ const ThreeDScene = () => {
                         left: '50%',
                         transform: 'translate(-50%, -50%)',
                         width: '30%',
-                        height: '10px', // Reduced height to make it smaller
+                        height: '10px',
                         backgroundColor: '#f0f0f0',
                         borderRadius: '10px',
                     }}
                 />
             )}
-            <Canvas style={{ height: '100%', width: '100%' }} shadowMap>
+            <Canvas style={{ height: '100%', width: '100%' }}>
                 <ambientLight intensity={0.4} />
                 <directionalLight position={[5, 5, 5]} intensity={1} castShadow />
                 <pointLight position={[10, 10, 10]} intensity={0.5} />
-                {isLoaded && <Model />} {/* Only render model when loaded */}
+                {isLoaded && <Model />} {/* Model yalnızca yüklendiğinde render edilir */}
                 
-                {/* OrbitControls - Disable zoom and pan */}
+                {/* OrbitControls - Zoom ve pan'ı devre dışı bırak */}
                 <OrbitControls enableRotate={false} enableZoom={false} enablePan={false} />
                 
                 <Environment preset="sunset" />
