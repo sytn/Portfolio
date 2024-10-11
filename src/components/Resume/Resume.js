@@ -1,9 +1,24 @@
-import * as React from "react";
+import React from 'react';
+import './Resume.css';
+import Button from "../Button/Button";
 
 const Resume = () => {
-    return (
-        <h1>This is Resume page</h1>
-    );
-}
+  const handleButtonClick = () => {
+    window.open("https://example.com/my-resume.pdf", "_blank"); // Replace with your actual URL
+  };
+
+  return (
+    <div className="resume-container">
+      <div className="button-container">
+        <Button 
+          text="Display My Resume" 
+          ariaLabel="Display My resume" 
+          className="button large-button" 
+          onClick={handleButtonClick} // Use the click handler
+        />
+      </div>
+    </div>
+  );
+};
 
 export default Resume;

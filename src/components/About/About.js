@@ -12,7 +12,7 @@ import {
     faGithub,
     faWindows
 } from '@fortawesome/free-brands-svg-icons';
-import { fa8, faArrows, faCode, faDatabase, faFire, faTriangleCircleSquare } from "@fortawesome/free-solid-svg-icons";
+import { faArrows, faCode, faDatabase, faFire, faTriangleCircleSquare } from "@fortawesome/free-solid-svg-icons";
 
 const About = () => {
     return (
