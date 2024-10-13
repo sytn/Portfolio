@@ -1,0 +1,29 @@
+{
+    "name": "Berkcan Alkan",
+    "contact": {
+        "email": "berkcanalkan978@proton.me",
+        "phone": "+90 541 427 1667"
+    },
+    "experience": [],
+    "education": [
+        {
+            "degree": "Associate of Computer Programming",
+            "institution": "Karabuk University",
+            "year": "2021"
+        }
+    ],
+    "skills": [
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Python",
+        "PostgreSQL"
+    ],
+    "projects": [
+        {
+            "title": "Portfolio Website",
+            "description": "A personal portfolio website to showcase my projects and skills.",
+            "link": "https://portfolio-mso7.vercel.app"
+        }
+    ]
+}

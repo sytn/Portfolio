@@ -16,7 +16,7 @@ const Header = () => {
 
     return (
         <header className="header">
-            <span className="logo">BA.</span>
+            <span className="logo" onClick={()=>navigate('/home')}>BA.</span>
             <div className="menu-container">
                 <button className="menu-toggle" onClick={toggleDropdown}>
                     <FontAwesomeIcon icon={isDropdownOpen ? faTimes : faBars} />

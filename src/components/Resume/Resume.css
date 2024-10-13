@@ -4,9 +4,42 @@
   flex-direction: column;
   align-items: center;
   min-height: 57.7vh;
-  color: black;
-  margin-top: 10%;
-  padding: 0 20px;
+  color: white;
+  margin-top: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  margin-top: 5%;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+p {
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+li {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  line-height: 1.5;
 }
 
 .button-container {
@@ -22,7 +55,6 @@
   max-width: 400px;
   box-shadow: 0 10px 15px rgba(255, 255, 255, 0.5);
   transition: box-shadow 0.5s ease;
-  
 }
 
 .button-container:hover {
@@ -33,7 +65,7 @@
 
 @media (min-width: 768px) {
   .resume-container {
-      margin-top: 100px;
+      margin-top: 0;
   }
 
   .button-container {
@@ -44,6 +76,6 @@
 
 @media (min-width: 1024px) {
   .resume-container {
-      margin-top: 150px;
+      margin-top: 0;
   }
 }
